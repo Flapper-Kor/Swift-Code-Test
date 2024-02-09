@@ -17,17 +17,10 @@ struct UsingAttributedString4: View {
         VStack{
             Spacer()
             Text(message)
-
             Spacer()
+            
             Button {
-//                sinval += 1
-                
-//                taskForAsync()
-
-//                moreEfficientIncrease(isActive: $isActive)
-                
                 isActive.toggle()
-                
             } label: {
                 if isActive {
                     Text("Stop")
@@ -38,14 +31,11 @@ struct UsingAttributedString4: View {
             Spacer()
             
             Button {
-//                sinval += 1
+                moreEfficientIncrease()
                 
-//                taskForAsync()
-
-                moreEfficientIncrease(isActive: $isActive)
-                
-//                isActive.toggle()
-                
+//                withAnimation {
+//                    moreEfficientIncrease()
+//                }
             } label: {
                 if isActive {
                     Text("Stop")
@@ -53,9 +43,6 @@ struct UsingAttributedString4: View {
                     Text("Start")
                 }
             }
-            
-            
-            
             
             Button {
                 isVisible.toggle()
@@ -96,12 +83,20 @@ struct UsingAttributedString4: View {
         return result
     }
     
-    func moreEfficientIncrease(isActive : Binding<Bool>){
-        isActive.wrappedValue.toggle()
+    
+    struct sdfsdf : Sendable{
+        let name: String
+        var age: Int
+    }
+
+    func moreEfficientIncrease(){
+        self.isActive.toggle()
         Task {
-            while isActive.wrappedValue {
-                self.offset += 1
-                try await Task.sleep(nanoseconds: 100_000_000)
+            while (self.isActive) {
+                withAnimation {
+                    self.offset += 1
+                }
+                try await Task.sleep(nanoseconds: 300_000_000)
             }
         }
     }
@@ -112,12 +107,6 @@ struct UsingAttributedString4: View {
             self.offset += 1
             i += 1
             sleep(UInt32(0.9 * 2))
-        }
-    }
-    
-    func taskForAsync(){
-        Task{
-            await increase()
         }
     }
 }

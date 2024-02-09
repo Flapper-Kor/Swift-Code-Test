@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment (\.grProxy) var gr
     var body: some View {
         TabView{
             TabView{
