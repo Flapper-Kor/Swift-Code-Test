@@ -13,7 +13,12 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection){
             TabView{
-                UsingResolvedColor()
+                if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *){
+                    GetRGBFromColor()
+                }
+                else{
+                    GetRGBFromColor_obsolated()
+                }
                 VideosUsingPhotosPicker()
                 UsingSprite()
                 UsingVideoPlayer()

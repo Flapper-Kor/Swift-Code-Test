@@ -24,6 +24,8 @@ struct BackgroundImage: View {
 //                .shadow(color: .purple, radius: 1)
 //                .shadow(color: .purple, radius: 1)
                 .stroke(color: .black, lineWidth: 4)  // .shadow 반복적용 하는 modifier를 만들어서 사용
+//                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                
                 .padding(50)
                 .background(
                     Image("singapore")
