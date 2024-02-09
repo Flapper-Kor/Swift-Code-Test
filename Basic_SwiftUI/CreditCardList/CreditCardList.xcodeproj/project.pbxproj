@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B101B2E2A4B3810002EFBC0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1B101B2D2A4B3810002EFBC0 /* Kingfisher */; };
+		1B101B302A4B3890002EFBC0 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B101B2F2A4B3890002EFBC0 /* CardDetailViewController.swift */; };
+		1B101B332A4B3A9E002EFBC0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1B101B322A4B3A9E002EFBC0 /* Lottie */; };
+		1B101B352A4B3E18002EFBC0 /* money.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B101B342A4B3E18002EFBC0 /* money.json */; };
+		1B101B382A4B45C7002EFBC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B101B372A4B45C7002EFBC0 /* GoogleService-Info.plist */; };
+		1B5711262A4B2E4600B80949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5711252A4B2E4600B80949 /* AppDelegate.swift */; };
+		1B5711282A4B2E4600B80949 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5711272A4B2E4600B80949 /* SceneDelegate.swift */; };
+		1B57112D2A4B2E4600B80949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B57112B2A4B2E4600B80949 /* Main.storyboard */; };
+		1B57112F2A4B2E4700B80949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B57112E2A4B2E4700B80949 /* Assets.xcassets */; };
+		1B5711322A4B2E4700B80949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5711302A4B2E4700B80949 /* LaunchScreen.storyboard */; };
+		1B57113B2A4B2EA200B80949 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57113A2A4B2EA200B80949 /* CardListViewController.swift */; };
+		1B57113E2A4B2FC900B80949 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57113D2A4B2FC900B80949 /* CreditCard.swift */; };
+		1B5711452A4B324800B80949 /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5711432A4B324800B80949 /* CardListCell.swift */; };
+		1B5711462A4B324800B80949 /* CardListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B5711442A4B324800B80949 /* CardListCell.xib */; };
+		1B73A7822A4BEBFD00F8ADDC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1B73A7812A4BEBFD00F8ADDC /* FirebaseDatabase */; };
+		1B73A7842A4BEBFD00F8ADDC /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B73A7832A4BEBFD00F8ADDC /* FirebaseDatabaseSwift */; };
+		1B73A7862A4BEBFD00F8ADDC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1B73A7852A4BEBFD00F8ADDC /* FirebaseFirestore */; };
+		1B73A7882A4BEBFD00F8ADDC /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1B73A7872A4BEBFD00F8ADDC /* FirebaseFirestoreCombine-Community */; };
+		1B73A78A2A4BEBFD00F8ADDC /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B73A7892A4BEBFD00F8ADDC /* FirebaseFirestoreSwift */; };
+		1B73A78C2A4BEE5B00F8ADDC /* CreditCardDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B73A78B2A4BEE5B00F8ADDC /* CreditCardDummy.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B101B2F2A4B3890002EFBC0 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		1B101B342A4B3E18002EFBC0 /* money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money.json; sourceTree = "<group>"; };
+		1B101B372A4B45C7002EFBC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1B5711222A4B2E4600B80949 /* CreditCardList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCardList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5711252A4B2E4600B80949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1B5711272A4B2E4600B80949 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1B57112C2A4B2E4600B80949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B57112E2A4B2E4700B80949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B5711312A4B2E4700B80949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B5711332A4B2E4700B80949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B57113A2A4B2EA200B80949 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
+		1B57113D2A4B2FC900B80949 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		1B5711432A4B324800B80949 /* CardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCell.swift; sourceTree = "<group>"; };
+		1B5711442A4B324800B80949 /* CardListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListCell.xib; sourceTree = "<group>"; };
+		1B73A78B2A4BEE5B00F8ADDC /* CreditCardDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardDummy.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B57111F2A4B2E4600B80949 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B73A7842A4BEBFD00F8ADDC /* FirebaseDatabaseSwift in Frameworks */,
+				1B73A7822A4BEBFD00F8ADDC /* FirebaseDatabase in Frameworks */,
+				1B101B2E2A4B3810002EFBC0 /* Kingfisher in Frameworks */,
+				1B73A78A2A4BEBFD00F8ADDC /* FirebaseFirestoreSwift in Frameworks */,
+				1B73A7882A4BEBFD00F8ADDC /* FirebaseFirestoreCombine-Community in Frameworks */,
+				1B73A7862A4BEBFD00F8ADDC /* FirebaseFirestore in Frameworks */,
+				1B101B332A4B3A9E002EFBC0 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B101B362A4B3ECB002EFBC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1B5711192A4B2E4600B80949 = {
+			isa = PBXGroup;
+			children = (
+				1B5711242A4B2E4600B80949 /* CreditCardList */,
+				1B5711232A4B2E4600B80949 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B5711232A4B2E4600B80949 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B5711222A4B2E4600B80949 /* CreditCardList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B5711242A4B2E4600B80949 /* CreditCardList */ = {
+			isa = PBXGroup;
+			children = (
+				1B101B362A4B3ECB002EFBC0 /* Resources */,
+				1B101B342A4B3E18002EFBC0 /* money.json */,
+				1B73A78B2A4BEE5B00F8ADDC /* CreditCardDummy.swift */,
+				1B57113C2A4B2FB200B80949 /* Model */,
+				1B5711392A4B2E8100B80949 /* ViewController */,
+				1B5711252A4B2E4600B80949 /* AppDelegate.swift */,
+				1B5711272A4B2E4600B80949 /* SceneDelegate.swift */,
+				1B57112B2A4B2E4600B80949 /* Main.storyboard */,
+				1B57112E2A4B2E4700B80949 /* Assets.xcassets */,
+				1B5711302A4B2E4700B80949 /* LaunchScreen.storyboard */,
+				1B5711332A4B2E4700B80949 /* Info.plist */,
+				1B101B372A4B45C7002EFBC0 /* GoogleService-Info.plist */,
+			);
+			path = CreditCardList;
+			sourceTree = "<group>";
+		};
+		1B5711392A4B2E8100B80949 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B57113A2A4B2EA200B80949 /* CardListViewController.swift */,
+				1B101B2F2A4B3890002EFBC0 /* CardDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1B57113C2A4B2FB200B80949 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B57113D2A4B2FC900B80949 /* CreditCard.swift */,
+				1B5711432A4B324800B80949 /* CardListCell.swift */,
+				1B5711442A4B324800B80949 /* CardListCell.xib */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B5711212A4B2E4600B80949 /* CreditCardList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B5711362A4B2E4700B80949 /* Build configuration list for PBXNativeTarget "CreditCardList" */;
+			buildPhases = (
+				1B57111E2A4B2E4600B80949 /* Sources */,
+				1B57111F2A4B2E4600B80949 /* Frameworks */,
+				1B5711202A4B2E4600B80949 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CreditCardList;
+			packageProductDependencies = (
+				1B101B2D2A4B3810002EFBC0 /* Kingfisher */,
+				1B101B322A4B3A9E002EFBC0 /* Lottie */,
+				1B73A7812A4BEBFD00F8ADDC /* FirebaseDatabase */,
+				1B73A7832A4BEBFD00F8ADDC /* FirebaseDatabaseSwift */,
+				1B73A7852A4BEBFD00F8ADDC /* FirebaseFirestore */,
+				1B73A7872A4BEBFD00F8ADDC /* FirebaseFirestoreCombine-Community */,
+				1B73A7892A4BEBFD00F8ADDC /* FirebaseFirestoreSwift */,
+			);
+			productName = CreditCardList;
+			productReference = 1B5711222A4B2E4600B80949 /* CreditCardList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B57111A2A4B2E4600B80949 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1B5711212A4B2E4600B80949 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 1B57111D2A4B2E4600B80949 /* Build configuration list for PBXProject "CreditCardList" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B5711192A4B2E4600B80949;
+			packageReferences = (
+				1B101B2C2A4B3810002EFBC0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1B101B312A4B3A9E002EFBC0 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				1B73A7802A4BEBFD00F8ADDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 1B5711232A4B2E4600B80949 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B5711212A4B2E4600B80949 /* CreditCardList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B5711202A4B2E4600B80949 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B5711322A4B2E4700B80949 /* LaunchScreen.storyboard in Resources */,
+				1B57112F2A4B2E4700B80949 /* Assets.xcassets in Resources */,
+				1B101B352A4B3E18002EFBC0 /* money.json in Resources */,
+				1B57112D2A4B2E4600B80949 /* Main.storyboard in Resources */,
+				1B5711462A4B324800B80949 /* CardListCell.xib in Resources */,
+				1B101B382A4B45C7002EFBC0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B57111E2A4B2E4600B80949 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B57113E2A4B2FC900B80949 /* CreditCard.swift in Sources */,
+				1B101B302A4B3890002EFBC0 /* CardDetailViewController.swift in Sources */,
+				1B5711452A4B324800B80949 /* CardListCell.swift in Sources */,
+				1B57113B2A4B2EA200B80949 /* CardListViewController.swift in Sources */,
+				1B73A78C2A4BEE5B00F8ADDC /* CreditCardDummy.swift in Sources */,
+				1B5711262A4B2E4600B80949 /* AppDelegate.swift in Sources */,
+				1B5711282A4B2E4600B80949 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1B57112B2A4B2E4600B80949 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B57112C2A4B2E4600B80949 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1B5711302A4B2E4700B80949 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B5711312A4B2E4700B80949 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B5711342A4B2E4700B80949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B5711352A4B2E4700B80949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B5711372A4B2E4700B80949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 529C69ULU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CreditCardList/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flappers.CreditCardList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B5711382A4B2E4700B80949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 529C69ULU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CreditCardList/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flappers.CreditCardList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B57111D2A4B2E4600B80949 /* Build configuration list for PBXProject "CreditCardList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B5711342A4B2E4700B80949 /* Debug */,
+				1B5711352A4B2E4700B80949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B5711362A4B2E4700B80949 /* Build configuration list for PBXNativeTarget "CreditCardList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B5711372A4B2E4700B80949 /* Debug */,
+				1B5711382A4B2E4700B80949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B101B2C2A4B3810002EFBC0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		1B101B312A4B3A9E002EFBC0 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		1B73A7802A4BEBFD00F8ADDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B101B2D2A4B3810002EFBC0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B101B2C2A4B3810002EFBC0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		1B101B322A4B3A9E002EFBC0 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B101B312A4B3A9E002EFBC0 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		1B73A7812A4BEBFD00F8ADDC /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B73A7802A4BEBFD00F8ADDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		1B73A7832A4BEBFD00F8ADDC /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B73A7802A4BEBFD00F8ADDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		1B73A7852A4BEBFD00F8ADDC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B73A7802A4BEBFD00F8ADDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		1B73A7872A4BEBFD00F8ADDC /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B73A7802A4BEBFD00F8ADDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		1B73A7892A4BEBFD00F8ADDC /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B73A7802A4BEBFD00F8ADDC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1B57111A2A4B2E4600B80949 /* Project object */;
+}

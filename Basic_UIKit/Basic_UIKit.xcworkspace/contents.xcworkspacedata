@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CollectionViewEx/CollectionViewEx.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Ex_LocalNotification/Ex_LocalNotification.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Ex_RemoteConfig/Ex_RemoteConfig.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Basic_SwiftUI/CreditCardList/CreditCardList.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FirebaseLoginSample/FirebaseLoginSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:covid-19/covid-19.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Weather/Weather.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Timer/Timer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Diary/Diary.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TodoList/TodoList.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Calculator/Calculator.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LED Board/LED Board.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ScreenTransition/ScreenTransition.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:QuotesGenerator/QuotesGenerator.xcodeproj">
+   </FileRef>
+</Workspace>
