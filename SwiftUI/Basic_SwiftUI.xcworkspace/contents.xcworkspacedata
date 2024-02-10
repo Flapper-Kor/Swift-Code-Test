@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Z_Example_GeometryReader/Z_Example_GeometryReader.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Z_Example_FocusState/Z_Example_FocusState.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Z_Example_Carousel/Z_Example_Carousel.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Codeable_Test/Codeable_Test.xcodeproj">
    </FileRef>
    <FileRef
