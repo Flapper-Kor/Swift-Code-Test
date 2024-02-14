@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "quickhelpcommentguide",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flapper-Kor/QuickHelpCommentGuide.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3e6bf83cfbb44928b4f6ff40512a51b64257e839"
+      }
+    }
+  ],
+  "version" : 2
+}

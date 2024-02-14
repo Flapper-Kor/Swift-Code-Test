@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 //private struct GRPKey: EnvironmentKey {
 //    static let defaultValue: GeometryProxy? = nil
 //}
@@ -21,16 +22,9 @@ import SwiftUI
 
 @main
 struct Z_Example_GeometryReaderApp: App {
-    
     var body: some Scene {
         WindowGroup {
-            ZStack{
-//                GeometryReader { proxy in
-                    ContentView()
-//                        .environment(\.GRP, proxy)
-//                }
-//                .frame(alignment: .center)
-            }
+            ContentView()
         }
     }
 }
