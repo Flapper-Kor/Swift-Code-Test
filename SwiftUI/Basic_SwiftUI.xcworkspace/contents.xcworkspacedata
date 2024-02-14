@@ -14,9 +14,6 @@
       location = "group:Codeable_Test/Codeable_Test.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Test/Test.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:SideMenuSwiftUI-main/SideMenuSwiftUI.xcodeproj">
    </FileRef>
    <FileRef
