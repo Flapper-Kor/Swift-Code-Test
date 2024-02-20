@@ -1,58 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:Z_Example_GeometryReader/Z_Example_GeometryReader.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Z_Example_FocusState/Z_Example_FocusState.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Z_Example_Carousel/Z_Example_Carousel.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Codeable_Test/Codeable_Test.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:SideMenuSwiftUI-main/SideMenuSwiftUI.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Images, shapes, and media/Images, shapes, and media.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Text/Text.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Composing Views/Composing Views.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TimerCarousel/TimerCarousel.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ExternalComponents/ExternalComponents.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Drawing/Drawing.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Animation_Example/Animation_Example.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Apple_Tutorial/Apple_Tutorial.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TabBarExample/TabBarExample.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TEST_SwiftUI/TEST_SwiftUI.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ModalExample/ModalExample.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Morphing_Example/Morphing_Example.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:UsingTagAndPicker/UsingTagAndPicker.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Swift">
+   </Group>
+   <Group
+      location = "container:"
+      name = "SwiftUI">
+      <FileRef
+         location = "group:Z_Example_GeometryReader/Z_Example_GeometryReader.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Z_Example_FocusState/Z_Example_FocusState.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Z_Example_Carousel/Z_Example_Carousel.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Codeable_Test/Codeable_Test.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SideMenuSwiftUI-main/SideMenuSwiftUI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Images, shapes, and media/Images, shapes, and media.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Text/Text.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Composing Views/Composing Views.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TimerCarousel/TimerCarousel.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ExternalComponents/ExternalComponents.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Drawing/Drawing.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Animation_Example/Animation_Example.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Apple_Tutorial/Apple_Tutorial.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TabBarExample/TabBarExample.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TEST_SwiftUI/TEST_SwiftUI.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ModalExample/ModalExample.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Morphing_Example/Morphing_Example.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:UsingTagAndPicker/UsingTagAndPicker.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Xcode">
+      <FileRef
+         location = "group:UnitTest/UnitTest.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

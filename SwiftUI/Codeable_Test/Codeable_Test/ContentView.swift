@@ -89,11 +89,20 @@ extension Coordinate: Decodable {
 
 extension Coordinate: Encodable {
     func encode(to encoder: Encoder) throws {
+        // container 생성
         var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        // 코딩 키 등록
         try container.encode(latitude, forKey: .latitude)
         try container.encode(longitude, forKey: .longitude)
         
+        // 중첩 코딩키 컨테이너 등록
+        // keyedBy = nestedkey (내부 키)
+        // forKey = 메인 키
         var additionalInfo = container.nestedContainer(keyedBy: AdditionalInfoKeys.self, forKey: .additionalInfo)
+        
+        
+        // encode
         try additionalInfo.encode(elevation, forKey: .elevation)
     }
 }
