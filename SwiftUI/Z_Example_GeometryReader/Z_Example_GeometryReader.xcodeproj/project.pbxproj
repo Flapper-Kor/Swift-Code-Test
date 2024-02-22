@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F117B102B7C7CFE0094850D /* QuickHelpCommentGuide in Frameworks */ = {isa = PBXBuildFile; productRef = 5F117B0F2B7C7CFE0094850D /* QuickHelpCommentGuide */; };
 		5F60F7762B78140900F3C0C8 /* Z_Example_GeometryReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F60F7752B78140900F3C0C8 /* Z_Example_GeometryReaderApp.swift */; };
 		5F60F7782B78140900F3C0C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F60F7772B78140900F3C0C8 /* ContentView.swift */; };
 		5F60F77A2B78140A00F3C0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F60F7792B78140A00F3C0C8 /* Assets.xcassets */; };
@@ -28,7 +27,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F117B102B7C7CFE0094850D /* QuickHelpCommentGuide in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +86,6 @@
 			);
 			name = Z_Example_GeometryReader;
 			packageProductDependencies = (
-				5F117B0F2B7C7CFE0094850D /* QuickHelpCommentGuide */,
 			);
 			productName = Z_Example_GeometryReader;
 			productReference = 5F60F7722B78140900F3C0C8 /* Z_Example_GeometryReader.app */;
@@ -119,7 +116,6 @@
 			);
 			mainGroup = 5F60F7692B78140900F3C0C8;
 			packageReferences = (
-				5F117B0E2B7C7CFE0094850D /* XCRemoteSwiftPackageReference "QuickHelpCommentGuide" */,
 			);
 			productRefGroup = 5F60F7732B78140900F3C0C8 /* Products */;
 			projectDirPath = "";
@@ -367,25 +363,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5F117B0E2B7C7CFE0094850D /* XCRemoteSwiftPackageReference "QuickHelpCommentGuide" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Flapper-Kor/QuickHelpCommentGuide.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5F117B0F2B7C7CFE0094850D /* QuickHelpCommentGuide */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5F117B0E2B7C7CFE0094850D /* XCRemoteSwiftPackageReference "QuickHelpCommentGuide" */;
-			productName = QuickHelpCommentGuide;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F60F76A2B78140900F3C0C8 /* Project object */;
 }

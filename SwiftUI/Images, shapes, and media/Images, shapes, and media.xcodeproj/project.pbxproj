@@ -17,9 +17,8 @@
 		1B9A496B2A78DE6C00DDD5EC /* UsingTrim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A496A2A78DE6C00DDD5EC /* UsingTrim.swift */; };
 		1B9A49762A78F26200DDD5EC /* Slash 프로필(배경제거).png in Resources */ = {isa = PBXBuildFile; fileRef = 1B9A49752A78F26200DDD5EC /* Slash 프로필(배경제거).png */; };
 		1B9A49782A78F5ED00DDD5EC /* Slash 프로필.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B9A49772A78F5ED00DDD5EC /* Slash 프로필.jpg */; };
-		1B9A497A2A78FED900DDD5EC /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A49792A78FED900DDD5EC /* ImageExtension.swift */; };
 		1B9B2A7F2A791B1500668587 /* UsingAppBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B2A7E2A791B1500668587 /* UsingAppBundle.swift */; };
-		1B9C6EA02A78D9E0004BA922 /* ContainerRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9C6E9F2A78D9E0004BA922 /* ContainerRelativeShape.swift */; };
+		1B9C6EA02A78D9E0004BA922 /* UsingContainerRelativeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9C6E9F2A78D9E0004BA922 /* UsingContainerRelativeShape.swift */; };
 		1B9C6EA42A78DBCE004BA922 /* UsingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9C6EA32A78DBCE004BA922 /* UsingVideoPlayer.swift */; };
 		1BE4402E2A77E4E7001B3974 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4402D2A77E4E7001B3974 /* BackgroundImage.swift */; };
 		1BE440302A780115001B3974 /* SolidShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE4402F2A780115001B3974 /* SolidShapes.swift */; };
@@ -35,6 +34,7 @@
 		1BFBDE532A7A3ACA0056ECAA /* AnimateSFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFBDE522A7A3ACA0056ECAA /* AnimateSFSymbol.swift */; };
 		5FC04D032B7648A50051A305 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC04D022B7648A50051A305 /* TextExtension.swift */; };
 		5FC04D202B76616B0051A305 /* GetRGBFromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC04D1F2B76616B0051A305 /* GetRGBFromColor.swift */; };
+		5FF3881C2B8702A4008FCAF0 /* FlapperLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 5FF3881B2B8702A4008FCAF0 /* FlapperLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,9 +49,8 @@
 		1B9A496A2A78DE6C00DDD5EC /* UsingTrim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTrim.swift; sourceTree = "<group>"; };
 		1B9A49752A78F26200DDD5EC /* Slash 프로필(배경제거).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slash 프로필(배경제거).png"; sourceTree = "<group>"; };
 		1B9A49772A78F5ED00DDD5EC /* Slash 프로필.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Slash 프로필.jpg"; sourceTree = "<group>"; };
-		1B9A49792A78FED900DDD5EC /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		1B9B2A7E2A791B1500668587 /* UsingAppBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingAppBundle.swift; sourceTree = "<group>"; };
-		1B9C6E9F2A78D9E0004BA922 /* ContainerRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRelativeShape.swift; sourceTree = "<group>"; };
+		1B9C6E9F2A78D9E0004BA922 /* UsingContainerRelativeShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingContainerRelativeShape.swift; sourceTree = "<group>"; };
 		1B9C6EA32A78DBCE004BA922 /* UsingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingVideoPlayer.swift; sourceTree = "<group>"; };
 		1BE4402D2A77E4E7001B3974 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
 		1BE4402F2A780115001B3974 /* SolidShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidShapes.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF3881C2B8702A4008FCAF0 /* FlapperLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 				1BE4402F2A780115001B3974 /* SolidShapes.swift */,
 				1BE440312A780180001B3974 /* FillAndStrokeShapes.swift */,
 				1B9A496A2A78DE6C00DDD5EC /* UsingTrim.swift */,
-				1B9C6E9F2A78D9E0004BA922 /* ContainerRelativeShape.swift */,
+				1B9C6E9F2A78D9E0004BA922 /* UsingContainerRelativeShape.swift */,
 				1B9B2A7E2A791B1500668587 /* UsingAppBundle.swift */,
 				1B9C6EA32A78DBCE004BA922 /* UsingVideoPlayer.swift */,
 				1B8D09D12A799E5400FC5C2E /* UsingSprite.swift */,
@@ -158,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				5FC04D022B7648A50051A305 /* TextExtension.swift */,
-				1B9A49792A78FED900DDD5EC /* ImageExtension.swift */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -179,6 +178,9 @@
 			dependencies = (
 			);
 			name = "Images, shapes, and media";
+			packageProductDependencies = (
+				5FF3881B2B8702A4008FCAF0 /* FlapperLayout */,
+			);
 			productName = "Images, shapes, and media";
 			productReference = 1B44130D2A77973500225F5D /* Images, shapes, and media.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +209,9 @@
 				Base,
 			);
 			mainGroup = 1B4413042A77973400225F5D;
+			packageReferences = (
+				5FF3881A2B8702A4008FCAF0 /* XCRemoteSwiftPackageReference "FlapperLayout" */,
+			);
 			productRefGroup = 1B44130E2A77973500225F5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,8 +258,7 @@
 				1BE440322A780180001B3974 /* FillAndStrokeShapes.swift in Sources */,
 				1B9C6EA42A78DBCE004BA922 /* UsingVideoPlayer.swift in Sources */,
 				1BEED3552A79ACF7002FA87D /* DynamicSFSymbol.swift in Sources */,
-				1B9C6EA02A78D9E0004BA922 /* ContainerRelativeShape.swift in Sources */,
-				1B9A497A2A78FED900DDD5EC /* ImageExtension.swift in Sources */,
+				1B9C6EA02A78D9E0004BA922 /* UsingContainerRelativeShape.swift in Sources */,
 				1BE440302A780115001B3974 /* SolidShapes.swift in Sources */,
 				1BEED3592A79B68B002FA87D /* VideosUsingPhotosPicker.swift in Sources */,
 				5FC04D032B7648A50051A305 /* TextExtension.swift in Sources */,
@@ -461,6 +465,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5FF3881A2B8702A4008FCAF0 /* XCRemoteSwiftPackageReference "FlapperLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flapper-Kor/FlapperLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FF3881B2B8702A4008FCAF0 /* FlapperLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FF3881A2B8702A4008FCAF0 /* XCRemoteSwiftPackageReference "FlapperLayout" */;
+			productName = FlapperLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B4413052A77973400225F5D /* Project object */;
 }

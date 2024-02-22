@@ -9,7 +9,6 @@ import SwiftUI
 import UIKit
 
 struct BackgroundImage: View {
-    @Environment (\.grProxy) var grProxy
     @State var attributedString = NSMutableAttributedString(string: "")
     @State var text = "Hacking with Swift"
     

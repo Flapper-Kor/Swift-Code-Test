@@ -9,13 +9,16 @@ import SwiftUI
 
 
 /*
- SwiftUI has a number of built-in shapes that are self-explanatory, but there’s one that stands out: ContainerRelativeShape. This isn’t a fixed shape, but is instead designed to be an insettable version of whatever shape it’s placed inside, which is particularly important when creating home screen widgets.
+ SwiftUI has a number of built-in shapes that are self-explanatory, but there’s one that stands out: ContainerRelativeShape.
+ This isn’t a fixed shape, but is instead designed to be an insettable version of whatever shape it’s placed inside,
+ which is particularly important when creating home screen widgets.
 
  Important: At this time, ContainerRelativeShape works only inside widgets. You can use it elsewhere, but it will just make a rectangle.
 
  For example, we could write code that draws a blue shape in our widget, and use ContainerRelativeShape to make sure it’s the same shape as the widget itself:
  */
-struct ContainerRelativeShape: View {
+// 위젯에서만 사용 가능
+struct UsingContainerRelativeShape: View {
     var body: some View {
         ZStack {
 //            ContainerRelativeShape()

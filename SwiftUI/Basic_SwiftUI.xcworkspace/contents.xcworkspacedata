@@ -67,6 +67,9 @@
       location = "container:"
       name = "Xcode">
       <FileRef
+         location = "group:FrameworkTest/FrameworkTest.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:UnitTest/UnitTest.xcodeproj">
       </FileRef>
    </Group>

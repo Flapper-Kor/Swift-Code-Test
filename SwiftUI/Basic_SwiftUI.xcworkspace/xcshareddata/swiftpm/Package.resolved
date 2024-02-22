@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "quickhelpcommentguide",
+      "identity" : "flapperlayout",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Flapper-Kor/QuickHelpCommentGuide.git",
+      "location" : "https://github.com/Flapper-Kor/FlapperLayout.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "3e6bf83cfbb44928b4f6ff40512a51b64257e839"
+        "revision" : "820bd4ee068eaf931b875fb8af5eb0e7f670c163",
+        "version" : "0.0.5"
       }
     }
   ],

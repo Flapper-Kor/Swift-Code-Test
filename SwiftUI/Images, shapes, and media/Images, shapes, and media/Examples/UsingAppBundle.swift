@@ -18,7 +18,38 @@ import SwiftUI
 
 struct UsingAppBundle: View {
     var body: some View {
-        Image(packageResource: "Slash 프로필(배경제거)", ofType: "png").resizable().scaledToFit().frame(width: 300) // Works well ✅
+        
+        ZStack{
+            Image(packageResource: "Slash 프로필", ofType: "jpg")
+                .resizable(resizingMode: .stretch)
+                .opacity(0.7)
+
+            Image(packageResource: "Slash 프로필(배경제거)", ofType: "png").resizable().scaledToFit().frame(width: 300) // Works well ✅
+        }
+    }
+}
+
+// MARK: - 번들에 등록된 이미지를 파일 이름과 확장자로 생성
+@available (iOS, obsoleted: 100)
+extension Image {
+    init(packageResource name: String, ofType type: String) {
+        #if canImport(UIKit)
+        guard let path = Bundle.main.path(forResource: name, ofType: type),
+              let image = UIImage(contentsOfFile: path) else {
+            self.init(name)
+            return
+        }
+        self.init(uiImage: image)
+        #elseif canImport(AppKit)
+        guard let path = Bundle.main.path(forResource: name, ofType: type),
+              let image = NSImage(contentsOfFile: path) else {
+            self.init(name)
+            return
+        }
+        self.init(nsImage: image)
+        #else
+        self.init(name)
+        #endif
     }
 }
 

@@ -34,9 +34,6 @@ struct CollectionView: View {
     var ids = ["HVNxfI8XYMw", "hnanNlDbsE4", "GOb70rO9JUY"]
     var body: some View {
         ZStack {
-            Image(packageResource: "Slash 프로필(배경제거)", ofType: "png")
-                .resizable(resizingMode: .stretch)
-                .opacity(0.7)
             ScrollView(showsIndicators: false) {
                 VStack {
                     Text("Using WebView\nUIViewRepresentable")
@@ -102,7 +99,7 @@ struct AVPlayerView_Web: View {
             }
         }
         .task {
-            self.url = URL(string: "내ㅡㄷ")
+//            self.url = URL(string: "내ㅡㄷ")
             // 동영상 플랫폼 등에서 제공하는 url 말고 실제 파일의 url을 말하는 것
             // 로컬 파일로 테스트를 해보려면 파일을 웹브라우저로 열어서 나온 file:///xxx.mp4 와 같이 표현된 url 을 넣어서 테스트 하면 된다.
         }

@@ -6,64 +6,117 @@
 //
 
 import SwiftUI
+import FlapperLayout
+
 
 struct ContentView: View {
-    @Environment (\.grProxy) var gr
-    var body: some View {
-        TabView{
-            TabView{
-                TextSelection()
-                CustomizeTheWayLinkOpened()
+    @State var currentID: ViewItem.ID?
+    var list : [ViewItem] = []
+    
+    init(){
+        self.list.append(ViewItem(subject: "Text Selection", view: TextSelection()))
+        self.list.append(ViewItem(subject: "Customize The Way Link Opened", view: CustomizeTheWayLinkOpened()))
+        self.list.append(ViewItem(subject: "Markdown Contents", view: MarkdownContents()))
+        self.list.append(ViewItem(subject: "Private Contents", view: PrivateContents()))
+        self.list.append(ViewItem(subject: "placeholder", view: placeholder()))
+        self.list.append(ViewItem(subject: "Using Image In Text", view: UsingImageInText()))
+        self.list.append(ViewItem(subject: "Text Case", view: TextCase()))
+        self.list.append(ViewItem(subject: "Date In Text", view: DateInText()))
+        self.list.append(ViewItem(subject: "Spacing", view: Spacing()))
+        self.list.append(ViewItem(subject: "Fommat Text", view: FommatText()))
+        self.list.append(ViewItem(subject: "compare Alignment", view: compareAlignment()))
+        self.list.append(ViewItem(subject: "multiline Text Alignment", view: multilineTextAlignment_Ex1()))
+        self.list.append(ViewItem(subject: "UsingAttributedString9", view: UsingAttributedString9()))
+        self.list.append(ViewItem(subject: "UsingAttributedString8", view: UsingAttributedString8()))
+        self.list.append(ViewItem(subject: "UsingAttributedString7", view: UsingAttributedString7()))
+        self.list.append(ViewItem(subject: "UsingAttributedString6", view: UsingAttributedString6()))
+        self.list.append(ViewItem(subject: "UsingAttributedString5", view: UsingAttributedString5()))
+        self.list.append(ViewItem(subject: "UsingAttributedString4", view: UsingAttributedString4()))
+        self.list.append(ViewItem(subject: "UsingAttributedString3", view: UsingAttributedString3()))
+        self.list.append(ViewItem(subject: "UsingAttributedString2", view: UsingAttributedString2()))
+        self.list.append(ViewItem(subject: "UsingAttributedString1", view: UsingAttributedString1()))
+        
+        /*
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+         */
+        
+    }
+    
+    var body: some View{
+        if #available(iOS 17, *){
+            VStack(spacing: 0){
+                if (!(list.isEmpty)){
+                    if let currentItem = list.filter({$0.id == currentID}).first{
+                        Text(currentItem.subject)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.purple)
+                            .font(.footnote)
+                    }
+                }
+                else{
+                    Text("Loading . . .")
+                }
+                
+                Carousel_ID(
+                    items: list, currentID: $currentID
+                ) { item in
+                    AnyView(item.view)
+                }
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            .tabItem {
-                Image(systemName: "ipad.landscape.badge.play")
-                Text("Link")
+            .onAppear{
+                // case using Carousel_ID
+                self.currentID = list.first?.id
             }
-            TabView{
-                MarkdownContents()
-                PrivateContents()
-                placeholder()
-                UsingImageInText()
-                TextCase()
-                DateInText()
-                Spacing()
-                FommatText()
-                compareAlignment()
-                multilineTextAlignment_Ex1()
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            .tabItem{
-                Image(systemName: "ipad.landscape.badge.play")
-                Text("Text")
-            }
-            
-            TabView{
-                UsingAttributedString9() // handle structured information (Measure)
-                UsingAttributedString8() // handle structured information (Name)
-                UsingAttributedString7() // handle structured information (Date)
-                UsingAttributedString6() // keep metadata (like accessibilitySpeechSpellsOutCharacters)
-                UsingAttributedString5() // Link Property
-                UsingAttributedString4() // baseLineOffset ++ Async thread
-                UsingAttributedString3() // underlineStyle
-                UsingAttributedString2() // combine String
-                UsingAttributedString1() // background, foreground
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            .tabItem{
-                Image(systemName: "ipad.landscape.badge.play")
-                Text("Attributed String")
-            }
-            
-
         }
-        .accentColor(.purple)                                               // 선택된 컬러 및 뷰 내부의 버튼 등의 색깔...
-        .onAppear {
-            UITabBar.appearance().backgroundColor = .black                  // 탭뷰 백그라운드 컬러
-            UITabBar.appearance().unselectedItemTintColor = UIColor.white   // 선택되지 않은 탭뷰 아이템의 컬러
+        else{
+            VStack(spacing: 0){
+                if (!(list.isEmpty)){
+                    if let currentItem = list.filter({$0.id == currentID}).first{
+                        //                if let currentItem = viewList.list.indices.contains(currentindex) ? viewList.list[currentindex] : nil{
+                        Text(currentItem.subject)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.purple)
+                        .font(.footnote)                    }
+                }
+                else{
+                    Text("Loading . . .")
+                }
+                
+                Carousel_ID_lowerVersion(
+                    items: list,
+                    currentID: $currentID
+                ) { item in
+                    AnyView(item.view)
+                }
+            }
+            .onAppear{
+                
+            }
         }
     }
 }

@@ -89,15 +89,6 @@ struct GetRGBFromColor_obsolated : View{
     }
 }
 
-#Preview {
-    if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *){
-        GetRGBFromColor()
-    }
-    else{
-        GetRGBFromColor_obsolated()
-    }
-}
-
 
 // MARK: - the way of extract color component
 // MARK: this functions are built-in functions in iOS 17.0 or later
