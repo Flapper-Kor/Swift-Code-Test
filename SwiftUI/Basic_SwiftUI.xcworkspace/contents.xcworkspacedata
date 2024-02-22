@@ -9,10 +9,7 @@
       location = "container:"
       name = "SwiftUI">
       <FileRef
-         location = "group:Z_Example_GeometryReader/Z_Example_GeometryReader.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Z_Example_FocusState/Z_Example_FocusState.xcodeproj">
+         location = "group:Z_Example/Z_Example.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:Z_Example_Carousel/Z_Example_Carousel.xcodeproj">
