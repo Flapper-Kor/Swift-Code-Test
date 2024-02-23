@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0D71112B88983800D33A90 /* IndexStyle_CustomIndexStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D71102B88983800D33A90 /* IndexStyle_CustomIndexStyle.swift */; };
+		5F0D71142B889B7C00D33A90 /* GeometryReader_UsingCustomKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D71132B889B7C00D33A90 /* GeometryReader_UsingCustomKey.swift */; };
+		5F0D71172B889DDB00D33A90 /* Clipping_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D71162B889DDB00D33A90 /* Clipping_Basic.swift */; };
+		5F0D711A2B88A44900D33A90 /* SwiftData_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D71192B88A44900D33A90 /* SwiftData_Basic.swift */; };
+		5F0D711D2B88A61700D33A90 /* SomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D711C2B88A61700D33A90 /* SomeTest.swift */; };
 		5FF3882D2B872488008FCAF0 /* Z_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3882C2B872488008FCAF0 /* Z_ExampleApp.swift */; };
 		5FF3882F2B872488008FCAF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3882E2B872488008FCAF0 /* ContentView.swift */; };
 		5FF388312B872489008FCAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF388302B872489008FCAF0 /* Assets.xcassets */; };
@@ -14,9 +19,17 @@
 		5FF3883F2B872509008FCAF0 /* GeometryReader_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3883E2B872509008FCAF0 /* GeometryReader_Basic.swift */; };
 		5FF388422B8726D5008FCAF0 /* FlapperLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 5FF388412B8726D5008FCAF0 /* FlapperLayout */; };
 		5FF388472B873D9B008FCAF0 /* FocusState_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF388462B873D9B008FCAF0 /* FocusState_Basic.swift */; };
+		5FF3884A2B874375008FCAF0 /* ScrollView_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF388492B874375008FCAF0 /* ScrollView_Basic.swift */; };
+		5FF3884D2B87454E008FCAF0 /* Codable_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3884C2B87454E008FCAF0 /* Codable_Basic.swift */; };
+		5FF388502B874C9E008FCAF0 /* TabView_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3884F2B874C9E008FCAF0 /* TabView_Basic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F0D71102B88983800D33A90 /* IndexStyle_CustomIndexStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexStyle_CustomIndexStyle.swift; sourceTree = "<group>"; };
+		5F0D71132B889B7C00D33A90 /* GeometryReader_UsingCustomKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReader_UsingCustomKey.swift; sourceTree = "<group>"; };
+		5F0D71162B889DDB00D33A90 /* Clipping_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipping_Basic.swift; sourceTree = "<group>"; };
+		5F0D71192B88A44900D33A90 /* SwiftData_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftData_Basic.swift; sourceTree = "<group>"; };
+		5F0D711C2B88A61700D33A90 /* SomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTest.swift; sourceTree = "<group>"; };
 		5FF388292B872488008FCAF0 /* Z_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Z_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF3882C2B872488008FCAF0 /* Z_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ExampleApp.swift; sourceTree = "<group>"; };
 		5FF3882E2B872488008FCAF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +38,9 @@
 		5FF388342B872489008FCAF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5FF3883E2B872509008FCAF0 /* GeometryReader_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReader_Basic.swift; sourceTree = "<group>"; };
 		5FF388462B873D9B008FCAF0 /* FocusState_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusState_Basic.swift; sourceTree = "<group>"; };
+		5FF388492B874375008FCAF0 /* ScrollView_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView_Basic.swift; sourceTree = "<group>"; };
+		5FF3884C2B87454E008FCAF0 /* Codable_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable_Basic.swift; sourceTree = "<group>"; };
+		5FF3884F2B874C9E008FCAF0 /* TabView_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView_Basic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +55,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F0D71122B889A1C00D33A90 /* IndexStyle */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D71102B88983800D33A90 /* IndexStyle_CustomIndexStyle.swift */,
+			);
+			path = IndexStyle;
+			sourceTree = "<group>";
+		};
+		5F0D71152B889D4D00D33A90 /* Clipping */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D71162B889DDB00D33A90 /* Clipping_Basic.swift */,
+			);
+			path = Clipping;
+			sourceTree = "<group>";
+		};
+		5F0D71182B88A41D00D33A90 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D71192B88A44900D33A90 /* SwiftData_Basic.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		5F0D711B2B88A5C500D33A90 /* TEST */ = {
+			isa = PBXGroup;
+			children = (
+				5F0D711C2B88A61700D33A90 /* SomeTest.swift */,
+			);
+			path = TEST;
+			sourceTree = "<group>";
+		};
+		5F0D711E2B88AFF200D33A90 /* Modal & Sheet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Modal & Sheet";
+			sourceTree = "<group>";
+		};
 		5FF388202B872488008FCAF0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +113,15 @@
 		5FF3882B2B872488008FCAF0 /* Z_Example */ = {
 			isa = PBXGroup;
 			children = (
+				5F0D711E2B88AFF200D33A90 /* Modal & Sheet */,
 				5FF3882E2B872488008FCAF0 /* ContentView.swift */,
+				5F0D711B2B88A5C500D33A90 /* TEST */,
+				5F0D71182B88A41D00D33A90 /* SwiftData */,
+				5F0D71152B889D4D00D33A90 /* Clipping */,
+				5F0D71122B889A1C00D33A90 /* IndexStyle */,
+				5FF3884E2B87491C008FCAF0 /* TapView */,
+				5FF3884B2B874536008FCAF0 /* Codable */,
+				5FF388482B87434D008FCAF0 /* ScrollView */,
 				5FF388452B873D81008FCAF0 /* FocusState */,
 				5FF3883B2B87249F008FCAF0 /* GeometryReader */,
 				5FF3882C2B872488008FCAF0 /* Z_ExampleApp.swift */,
@@ -81,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5FF3883E2B872509008FCAF0 /* GeometryReader_Basic.swift */,
+				5F0D71132B889B7C00D33A90 /* GeometryReader_UsingCustomKey.swift */,
 			);
 			path = GeometryReader;
 			sourceTree = "<group>";
@@ -91,6 +155,30 @@
 				5FF388462B873D9B008FCAF0 /* FocusState_Basic.swift */,
 			);
 			path = FocusState;
+			sourceTree = "<group>";
+		};
+		5FF388482B87434D008FCAF0 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				5FF388492B874375008FCAF0 /* ScrollView_Basic.swift */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		5FF3884B2B874536008FCAF0 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				5FF3884C2B87454E008FCAF0 /* Codable_Basic.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		5FF3884E2B87491C008FCAF0 /* TapView */ = {
+			isa = PBXGroup;
+			children = (
+				5FF3884F2B874C9E008FCAF0 /* TabView_Basic.swift */,
+			);
+			path = TapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +258,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FF388472B873D9B008FCAF0 /* FocusState_Basic.swift in Sources */,
+				5FF3884D2B87454E008FCAF0 /* Codable_Basic.swift in Sources */,
+				5FF3884A2B874375008FCAF0 /* ScrollView_Basic.swift in Sources */,
+				5F0D71112B88983800D33A90 /* IndexStyle_CustomIndexStyle.swift in Sources */,
 				5FF3882F2B872488008FCAF0 /* ContentView.swift in Sources */,
 				5FF3882D2B872488008FCAF0 /* Z_ExampleApp.swift in Sources */,
+				5FF388502B874C9E008FCAF0 /* TabView_Basic.swift in Sources */,
+				5F0D71142B889B7C00D33A90 /* GeometryReader_UsingCustomKey.swift in Sources */,
+				5F0D71172B889DDB00D33A90 /* Clipping_Basic.swift in Sources */,
+				5F0D711D2B88A61700D33A90 /* SomeTest.swift in Sources */,
+				5F0D711A2B88A44900D33A90 /* SwiftData_Basic.swift in Sources */,
 				5FF3883F2B872509008FCAF0 /* GeometryReader_Basic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

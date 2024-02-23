@@ -8,47 +8,44 @@
    <Group
       location = "container:"
       name = "SwiftUI">
-      <FileRef
-         location = "group:Z_Example/Z_Example.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Z_Example_Carousel/Z_Example_Carousel.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Codeable_Test/Codeable_Test.xcodeproj">
-      </FileRef>
+      <Group
+         location = "container:"
+         name = "HackingWithSwift">
+         <FileRef
+            location = "group:Animation_Example/Animation_Example.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Composing Views/Composing Views.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Drawing/Drawing.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Images, shapes, and media/Images, shapes, and media.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Text/Text.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Flapper">
+         <FileRef
+            location = "group:Z_Example/Z_Example.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Apple">
+         <FileRef
+            location = "group:Apple_Tutorial/Apple_Tutorial.xcodeproj">
+         </FileRef>
+      </Group>
       <FileRef
          location = "group:SideMenuSwiftUI-main/SideMenuSwiftUI.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Images, shapes, and media/Images, shapes, and media.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Text/Text.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Composing Views/Composing Views.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:TimerCarousel/TimerCarousel.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:ExternalComponents/ExternalComponents.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Drawing/Drawing.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Animation_Example/Animation_Example.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Apple_Tutorial/Apple_Tutorial.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:TabBarExample/TabBarExample.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:TEST_SwiftUI/TEST_SwiftUI.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:ModalExample/ModalExample.xcodeproj">

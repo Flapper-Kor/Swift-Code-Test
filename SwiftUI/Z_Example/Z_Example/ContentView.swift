@@ -8,21 +8,21 @@
 import SwiftUI
 import FlapperLayout
 
-
 struct ContentView: View {
     @State var currentID: ViewItem.ID?
     var list : [ViewItem] = []
     
     init(){
-
+        self.list.append(ViewItem(subject: "SomeTest", view: SomeTest()))
+        
         self.list.append(ViewItem(subject: "Geometry Reader (화면 방향 전환하여 사이즈 확인)", view: GeometryReader_Basic()))
-        self.list.append(ViewItem(subject: "FocusState", view: FocusState_Basic()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
+        self.list.append(ViewItem(subject: "FocusState Basic", view: FocusState_Basic()))
+        self.list.append(ViewItem(subject: "ScrollView Basic", view: ScrollView_Basic()))
+        self.list.append(ViewItem(subject: "Codable Basic", view: Codable_Basic()))
+        self.list.append(ViewItem(subject: "TabView Basic", view: TabView_Basic()))
+        self.list.append(ViewItem(subject: "IndexStyle CustomIndexStyle", view: IndexStyle_CustomIndexStyle()))
+        self.list.append(ViewItem(subject: "Clipping Basic", view: Clipping_Basic()))
+        
 //        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
 //        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
 //        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))

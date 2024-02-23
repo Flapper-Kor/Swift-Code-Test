@@ -11,6 +11,7 @@ import RealityKit
     GeometryReader{
         childView{
             이럴 경우 별도의 padding이 적용되지 않은 경우 자식뷰의 사이즈를 부모뷰의 사이즈와 같게 만든다.
+            childView의 사이즈가 부모뷰보다 작은 경우, 부모뷰에 대한 정령 상태도 해제된다.
         }
     }
  }
