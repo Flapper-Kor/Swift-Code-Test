@@ -12,19 +12,19 @@
          location = "container:"
          name = "HackingWithSwift">
          <FileRef
-            location = "group:Animation_Example/Animation_Example.xcodeproj">
+            location = "group:SwiftUI/HackingWithSwift/Animation_Example/Animation_Example.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:Composing Views/Composing Views.xcodeproj">
+            location = "group:SwiftUI/HackingWithSwift/Composing Views/Composing Views.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:Drawing/Drawing.xcodeproj">
+            location = "group:SwiftUI/HackingWithSwift/Drawing/Drawing.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:Images, shapes, and media/Images, shapes, and media.xcodeproj">
+            location = "group:SwiftUI/HackingWithSwift/Images, shapes, and media/Images, shapes, and media.xcodeproj">
          </FileRef>
          <FileRef
-            location = "group:Text/Text.xcodeproj">
+            location = "group:SwiftUI/HackingWithSwift/Text/Text.xcodeproj">
          </FileRef>
       </Group>
       <Group
@@ -61,10 +61,10 @@
       location = "container:"
       name = "Xcode">
       <FileRef
-         location = "group:FrameworkTest/FrameworkTest.xcodeproj">
+         location = "group:Xcode/UnitTest/UnitTest.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:UnitTest/UnitTest.xcodeproj">
+         location = "group:Xcode/FrameworkTest/FrameworkTest.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>
