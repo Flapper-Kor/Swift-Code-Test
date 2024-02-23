@@ -31,7 +31,7 @@
          location = "container:"
          name = "Flapper">
          <FileRef
-            location = "group:Z_Example/Z_Example.xcodeproj">
+            location = "group:SwiftUI/Flapper/Z_Example/Z_Example.xcodeproj">
          </FileRef>
       </Group>
       <Group
