@@ -17,13 +17,15 @@ struct ContentView: View {
         
         self.list.append(ViewItem(subject: "Geometry Reader (화면 방향 전환하여 사이즈 확인)", view: GeometryReader_Basic()))
         self.list.append(ViewItem(subject: "FocusState Basic", view: FocusState_Basic()))
-        self.list.append(ViewItem(subject: "ScrollView Basic", view: ScrollView_Basic()))
+        if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *){
+            self.list.append(ViewItem(subject: "ScrollView Basic", view: ScrollView_Basic()))
+        }
         self.list.append(ViewItem(subject: "Codable Basic", view: Codable_Basic()))
         self.list.append(ViewItem(subject: "TabView Basic", view: TabView_Basic()))
         self.list.append(ViewItem(subject: "IndexStyle CustomIndexStyle", view: IndexStyle_CustomIndexStyle()))
         self.list.append(ViewItem(subject: "Clipping Basic", view: Clipping_Basic()))
+        self.list.append(ViewItem(subject: "Sheet Basic", view: Sheet_Basic()))
         
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
 //        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
 //        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
 //        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
@@ -74,14 +76,17 @@ struct ContentView: View {
                 }
                 
                 Carousel_ID(
-                    items: list, currentID: $currentID
+                    items: list, 
+                    currentID: $currentID,
+                    stackStyle: .none
+                    
                 ) { item in
                     AnyView(item.view)
                 }
             }
             .onAppear{
                 // case using Carousel_ID
-                self.currentID = list.first?.id
+//                self.currentID = list.first?.id
             }
         }
         else{
@@ -93,7 +98,8 @@ struct ContentView: View {
                             .lineLimit(2)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.purple)
-                        .font(.footnote)                    }
+                            .font(.footnote)
+                    }
                 }
                 else{
                     Text("Loading . . .")
@@ -105,9 +111,6 @@ struct ContentView: View {
                 ) { item in
                     AnyView(item.view)
                 }
-            }
-            .onAppear{
-                
             }
         }
     }

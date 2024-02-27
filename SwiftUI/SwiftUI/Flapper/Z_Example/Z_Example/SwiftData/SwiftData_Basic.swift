@@ -9,13 +9,6 @@ import SwiftUI
 import SwiftData
 import FlapperLayout
 
-//@Model
-//private class IDSet_<T>: IDSet<T> where T: Identifiable, T:Hashable{
-//    
-//    
-//    
-//}
-
 
 struct SwiftData_Basic: View {
     var body: some View {

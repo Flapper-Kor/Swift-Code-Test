@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Flapper-Kor/FlapperLayout.git",
       "state" : {
-        "revision" : "820bd4ee068eaf931b875fb8af5eb0e7f670c163",
-        "version" : "0.0.5"
+        "revision" : "cf67a262caded3979ca56c24c97acd8a802c1aac",
+        "version" : "0.0.11"
       }
     }
   ],

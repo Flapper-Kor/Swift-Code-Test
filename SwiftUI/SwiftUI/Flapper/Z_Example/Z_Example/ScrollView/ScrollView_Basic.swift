@@ -6,11 +6,9 @@
 //
 import SwiftUI
 
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 struct ScrollView_Basic: View {
     @State private var selectedID: UUID?
-    @FocusState private var focusID: UUID?
-    private let initialID: UUID
-
     var items: [Item]
 
     init(){
@@ -18,9 +16,6 @@ struct ScrollView_Basic: View {
         for _ in 1...30 {
             items.append(Item())
         }
-        initialID = items.first!.id
-        focusID = items.first?.id
-        
     }
     
     var body: some View {
@@ -28,12 +23,11 @@ struct ScrollView_Basic: View {
             VStack {
                 ScrollView(.horizontal) {
                     LazyHStack(spacing: 0) {
-                        ForEach(items) { item in
+                        ForEach(items, id: \.id) { item in
                             ItemView(item: item)
                                 .containerRelativeFrame(.horizontal) { width, _ in
                                     min(width, .infinity)
                                 }
-
                                 .onTapGesture {
                                     if (item.id != selectedID){
                                         selectedID = item.id
@@ -48,21 +42,19 @@ struct ScrollView_Basic: View {
                 .scrollTargetBehavior(.paging)
             }
             .background()
-            .onAppear { selectedID = initialID }
-            .onChange(of: selectedID) { focusID = $1 }
             .border(.red)
             
             Spacer(minLength: 30)
             VStack {
                 ScrollView(.horizontal) {
                     LazyHStack(spacing: 0) {
-                        ForEach(items) { item in
+                        ForEach(items, id: \.id) { item in
                             ItemView(item: item)
                                 .containerRelativeFrame(
                                     .horizontal,        // 규직을 정의할 방향
                                     count: 2,           // 컨테이너를 나눌 수 (아래의 span과 반대)
                                     span: 1,            // 뷰가 실제로 차지해야 하는 행이나 열의 수
-                                    spacing: 0,         // 컨테이너 사이의 간격
+                                    spacing: -50,         // 컨테이너 사이의 간격
                                     alignment: .center  // 잘 모르겠음
                                 )
                                 .onTapGesture {
@@ -79,11 +71,8 @@ struct ScrollView_Basic: View {
                 .scrollTargetBehavior(.paging)
             }
             .background()
-            .onAppear { selectedID = initialID }
-            .onChange(of: selectedID) { focusID = $1 }
             .border(.red)
         }
-        
     }
 }
 
@@ -97,7 +86,7 @@ struct ItemView : View {
         get { return self._currentOffset }
     }
 
-    @State private var isDragging = false
+//    @State private var isDragging = false
     
     @State private var draggedOffset = CGSize.zero
     @State private var accumulatedOffset = CGSize.zero
@@ -105,14 +94,21 @@ struct ItemView : View {
     var drag: some Gesture {
         DragGesture()
             .onChanged { gesture in
-                withAnimation(.spring()) {
+//                withAnimation(.snappy) {
                     draggedOffset = accumulatedOffset + gesture.translation
-                }
+                print(draggedOffset)
+//                }
             }
             .onEnded { gesture in
-                withAnimation(.spring()) {
-                    accumulatedOffset = accumulatedOffset + gesture.translation
+//                withAnimation(.spring()) {
+                if(abs(draggedOffset.height) < 200){
+                    draggedOffset = .zero
+                }else{
+                    
                 }
+                accumulatedOffset = .zero
+//                    accumulatedOffset = accumulatedOffset + gesture.translation
+//                }
             }
     }
     
@@ -157,7 +153,6 @@ class Item : Identifiable {
         string = id.uuidString
     }
 }
-
 
 
 #Preview {
