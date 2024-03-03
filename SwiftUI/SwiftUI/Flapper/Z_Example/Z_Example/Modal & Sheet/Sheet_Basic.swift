@@ -10,11 +10,12 @@ import SwiftUI
 
 struct Sheet_Basic: View {
     var body: some View{
-        Sheet_Basic_ios17below()
-        
+        VStack{
+            Sheet_Basic_ios17below()
+            
             Sheet_Basic_IOS16()
             Sheet_Basic_ios17below()
-        
+        }
     }
 }
 

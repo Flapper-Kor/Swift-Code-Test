@@ -82,7 +82,9 @@ struct ContentView: View {
                 }
                 
                 Carousel_ID(
-                    items: list, currentID: $currentID
+                    items: list, 
+                    currentID: $currentID,
+                    stackStyle: .normal
                 ) { item in
                     AnyView(item.view)
                 }
@@ -96,12 +98,12 @@ struct ContentView: View {
             VStack(spacing: 0){
                 if (!(list.isEmpty)){
                     if let currentItem = list.filter({$0.id == currentID}).first{
-                        //                if let currentItem = viewList.list.indices.contains(currentindex) ? viewList.list[currentindex] : nil{
                         Text(currentItem.subject)
                             .lineLimit(2)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.purple)
-                        .font(.footnote)                    }
+                            .font(.footnote)
+                    }
                 }
                 else{
                     Text("Loading . . .")

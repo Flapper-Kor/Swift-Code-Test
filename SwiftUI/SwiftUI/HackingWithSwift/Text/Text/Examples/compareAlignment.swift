@@ -23,7 +23,7 @@ struct compareAlignment: View {
                 .font(.largeTitle)
                 .multilineTextAlignment(alignment)
                 .frame(width: 300)
-        }
+        }.pickerStyle(.segmented)
     }
 }
 

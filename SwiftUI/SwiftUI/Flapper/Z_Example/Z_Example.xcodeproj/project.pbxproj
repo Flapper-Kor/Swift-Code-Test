@@ -13,6 +13,13 @@
 		5F0D711A2B88A44900D33A90 /* SwiftData_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D71192B88A44900D33A90 /* SwiftData_Basic.swift */; };
 		5F0D711D2B88A61700D33A90 /* SomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D711C2B88A61700D33A90 /* SomeTest.swift */; };
 		5F0D71352B88C71100D33A90 /* Sheet_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D71342B88C71100D33A90 /* Sheet_Basic.swift */; };
+		5FDC15822B9342A900AC6110 /* Collections_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC15812B9342A900AC6110 /* Collections_Basic.swift */; };
+		5FDC15852B93495600AC6110 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5FDC15842B93495600AC6110 /* BitCollections */; };
+		5FDC15872B93495600AC6110 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 5FDC15862B93495600AC6110 /* Collections */; };
+		5FDC15892B93495700AC6110 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5FDC15882B93495700AC6110 /* DequeModule */; };
+		5FDC158B2B93495700AC6110 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5FDC158A2B93495700AC6110 /* HashTreeCollections */; };
+		5FDC158D2B93495700AC6110 /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5FDC158C2B93495700AC6110 /* HeapModule */; };
+		5FDC15902B934E6A00AC6110 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC158F2B934E6A00AC6110 /* ViewExtensions.swift */; };
 		5FF3882D2B872488008FCAF0 /* Z_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3882C2B872488008FCAF0 /* Z_ExampleApp.swift */; };
 		5FF3882F2B872488008FCAF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF3882E2B872488008FCAF0 /* ContentView.swift */; };
 		5FF388312B872489008FCAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF388302B872489008FCAF0 /* Assets.xcassets */; };
@@ -32,6 +39,8 @@
 		5F0D71192B88A44900D33A90 /* SwiftData_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftData_Basic.swift; sourceTree = "<group>"; };
 		5F0D711C2B88A61700D33A90 /* SomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeTest.swift; sourceTree = "<group>"; };
 		5F0D71342B88C71100D33A90 /* Sheet_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet_Basic.swift; sourceTree = "<group>"; };
+		5FDC15812B9342A900AC6110 /* Collections_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections_Basic.swift; sourceTree = "<group>"; };
+		5FDC158F2B934E6A00AC6110 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtensions.swift; path = Helper/ViewExtensions.swift; sourceTree = "<group>"; };
 		5FF388292B872488008FCAF0 /* Z_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Z_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FF3882C2B872488008FCAF0 /* Z_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Z_ExampleApp.swift; sourceTree = "<group>"; };
 		5FF3882E2B872488008FCAF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +59,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FDC158B2B93495700AC6110 /* HashTreeCollections in Frameworks */,
+				5FDC15872B93495600AC6110 /* Collections in Frameworks */,
+				5FDC15892B93495700AC6110 /* DequeModule in Frameworks */,
+				5FDC15852B93495600AC6110 /* BitCollections in Frameworks */,
+				5FDC158D2B93495700AC6110 /* HeapModule in Frameworks */,
 				5FF388422B8726D5008FCAF0 /* FlapperLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,9 +111,26 @@
 			path = "Modal & Sheet";
 			sourceTree = "<group>";
 		};
+		5FDC15802B93428500AC6110 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC15812B9342A900AC6110 /* Collections_Basic.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		5FDC158E2B934E0A00AC6110 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC158F2B934E6A00AC6110 /* ViewExtensions.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		5FF388202B872488008FCAF0 = {
 			isa = PBXGroup;
 			children = (
+				5FDC158E2B934E0A00AC6110 /* Helper */,
 				5FF3882B2B872488008FCAF0 /* Z_Example */,
 				5FF3882A2B872488008FCAF0 /* Products */,
 			);
@@ -117,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				5FF3882E2B872488008FCAF0 /* ContentView.swift */,
+				5FDC15802B93428500AC6110 /* Collections */,
 				5F0D711B2B88A5C500D33A90 /* TEST */,
 				5F0D71312B88C6BE00D33A90 /* Modal & Sheet */,
 				5F0D71182B88A41D00D33A90 /* SwiftData */,
@@ -202,6 +234,11 @@
 			name = Z_Example;
 			packageProductDependencies = (
 				5FF388412B8726D5008FCAF0 /* FlapperLayout */,
+				5FDC15842B93495600AC6110 /* BitCollections */,
+				5FDC15862B93495600AC6110 /* Collections */,
+				5FDC15882B93495700AC6110 /* DequeModule */,
+				5FDC158A2B93495700AC6110 /* HashTreeCollections */,
+				5FDC158C2B93495700AC6110 /* HeapModule */,
 			);
 			productName = Z_Example;
 			productReference = 5FF388292B872488008FCAF0 /* Z_Example.app */;
@@ -233,6 +270,7 @@
 			mainGroup = 5FF388202B872488008FCAF0;
 			packageReferences = (
 				5FF388402B8726D5008FCAF0 /* XCRemoteSwiftPackageReference "FlapperLayout" */,
+				5FDC15832B93495600AC6110 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 5FF3882A2B872488008FCAF0 /* Products */;
 			projectDirPath = "";
@@ -264,6 +302,7 @@
 				5FF3884D2B87454E008FCAF0 /* Codable_Basic.swift in Sources */,
 				5FF3884A2B874375008FCAF0 /* ScrollView_Basic.swift in Sources */,
 				5F0D71352B88C71100D33A90 /* Sheet_Basic.swift in Sources */,
+				5FDC15822B9342A900AC6110 /* Collections_Basic.swift in Sources */,
 				5F0D71112B88983800D33A90 /* IndexStyle_CustomIndexStyle.swift in Sources */,
 				5FF3882F2B872488008FCAF0 /* ContentView.swift in Sources */,
 				5FF3882D2B872488008FCAF0 /* Z_ExampleApp.swift in Sources */,
@@ -272,6 +311,7 @@
 				5F0D71172B889DDB00D33A90 /* Clipping_Basic.swift in Sources */,
 				5F0D711D2B88A61700D33A90 /* SomeTest.swift in Sources */,
 				5F0D711A2B88A44900D33A90 /* SwiftData_Basic.swift in Sources */,
+				5FDC15902B934E6A00AC6110 /* ViewExtensions.swift in Sources */,
 				5FF3883F2B872509008FCAF0 /* GeometryReader_Basic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +533,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5FDC15832B93495600AC6110 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 		5FF388402B8726D5008FCAF0 /* XCRemoteSwiftPackageReference "FlapperLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flapper-Kor/FlapperLayout.git";
@@ -504,6 +552,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5FDC15842B93495600AC6110 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FDC15832B93495600AC6110 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		5FDC15862B93495600AC6110 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FDC15832B93495600AC6110 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		5FDC15882B93495700AC6110 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FDC15832B93495600AC6110 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		5FDC158A2B93495700AC6110 /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FDC15832B93495600AC6110 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		5FDC158C2B93495700AC6110 /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FDC15832B93495600AC6110 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
 		5FF388412B8726D5008FCAF0 /* FlapperLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5FF388402B8726D5008FCAF0 /* XCRemoteSwiftPackageReference "FlapperLayout" */;

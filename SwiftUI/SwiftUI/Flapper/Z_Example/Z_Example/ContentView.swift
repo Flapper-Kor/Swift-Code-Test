@@ -7,113 +7,195 @@
 
 import SwiftUI
 import FlapperLayout
+import Collections
 
-struct ContentView: View {
-    @State var currentID: ViewItem.ID?
-    var list : [ViewItem] = []
+
+class ViewList: ObservableObject{
     
-    init(){
-        self.list.append(ViewItem(subject: "SomeTest", view: SomeTest()))
+//    var list = views // COW(Copy On Write) 로 복사
+    var views : [ViewItem] =
+    [
+        ViewItem(subject: "SomeTest", view: SomeTest()),
+        ViewItem(subject: "Geometry Reader (화면 방향 전환하여 사이즈 확인)", view: GeometryReader_Basic()),
+        ViewItem(subject: "FocusState Basic", view: FocusState_Basic()),
+        ViewItem(subject: "ScrollView Basic", view: ScrollView_Basic()),
+        ViewItem(subject: "Codable Basic", view: Codable_Basic()),
+        ViewItem(subject: "TabView Basic", view: TabView_Basic()),
+        ViewItem(subject: "IndexStyle CustomIndexStyle", view: IndexStyle_CustomIndexStyle()),
+        ViewItem(subject: "Clipping Basic", view: Clipping_Basic()),
+        ViewItem(subject: "Sheet Basic", view: Sheet_Basic()),
         
-        self.list.append(ViewItem(subject: "Geometry Reader (화면 방향 전환하여 사이즈 확인)", view: GeometryReader_Basic()))
-        self.list.append(ViewItem(subject: "FocusState Basic", view: FocusState_Basic()))
-        if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *){
-            self.list.append(ViewItem(subject: "ScrollView Basic", view: ScrollView_Basic()))
+        // 여기서부터는 순서 다시 정의
+        // 위 항목들은 처음 것부터 정령해서 넣을 것
+        ViewItem(subject: "Collection Basic", view: Collections_Basic())
+        
+    //    ViewItem(subject: "<#subject#>", view: <#view#>())
+    //    ViewItem(subject: "<#subject#>", view: <#view#>())
+    //    ViewItem(subject: "<#subject#>", view: <#view#>())
+    ]
+    
+    @Published var current: ViewItem?
+    
+    @AppStorage ("currentIndex") var _currentIndex: Int = 0
+    
+    var currentIndex: Int{
+        get{
+            return self._currentIndex
         }
-        self.list.append(ViewItem(subject: "Codable Basic", view: Codable_Basic()))
-        self.list.append(ViewItem(subject: "TabView Basic", view: TabView_Basic()))
-        self.list.append(ViewItem(subject: "IndexStyle CustomIndexStyle", view: IndexStyle_CustomIndexStyle()))
-        self.list.append(ViewItem(subject: "Clipping Basic", view: Clipping_Basic()))
-        self.list.append(ViewItem(subject: "Sheet Basic", view: Sheet_Basic()))
-        
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-//        self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-        
-        /*
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-                self.list.append(ViewItem(subject: "<#subject#>", view: <#view#>()))
-         */
-        
+        set{
+            if( 0 <= newValue && newValue < self.views.count){
+                self._currentIndex = newValue
+            }
+        }
     }
     
+    init(){
+        
+        print(self.currentIndex)
+        self.current = views[self.currentIndex]
+    }
+    
+    var hasNext : Bool {
+        return (currentIndex < (self.views.count - 1))
+    }
+    
+    var hasPrevious: Bool{
+        return (currentIndex > 1)
+    }
+    
+    var next : ViewItem? {
+        if(self.hasNext){
+            self.currentIndex += 1
+            
+            return self.current
+        }
+        else{
+            return current
+        }
+    }
+}
+
+//struct ContentView: View{
+//    var viewList = ViewList()
+//    
+//    var body: some View{
+//        Container {
+//            AnyView(viewList.views[8].view)
+//            
+//        }.border(.black)
+//    }
+//}
+//
+//struct Container <Content> : View where Content: View{
+//    var content: ()-> Content
+//    
+//    init(@ViewBuilder _ content: @escaping () -> Content) {
+//        self.content = content
+//    }
+//    
+//    var body: some View{
+//        ZStack{
+//            Color.clear.background()
+//            content()
+//        }
+//    }
+//}
+
+
+struct ContentView: View {
+    @StateObject var viewList = ViewList()
+    
     var body: some View{
-        if #available(iOS 17, *){
-            VStack(spacing: 0){
-                if (!(list.isEmpty)){
-                    if let currentItem = list.filter({$0.id == currentID}).first{
+        if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *){
+            ZStack{
+                VStack(spacing: 0){
+                    if let currentItem = viewList.current{
                         Text(currentItem.subject)
                             .lineLimit(2)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.purple)
                             .font(.footnote)
                     }
-                }
-                else{
-                    Text("Loading . . .")
-                }
-                
-                Carousel_ID(
-                    items: list, 
-                    currentID: $currentID,
-                    stackStyle: .none
                     
-                ) { item in
-                    AnyView(item.view)
+                    else{
+                        Text("Error : current is nil")
+                            .lineLimit(2)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.red)
+                            .font(.footnote)
+                    }
+                    
+                    Carousel(
+                        items: viewList.views,
+                        current: $viewList.current,
+                        stackStyle: .normal
+                    ) { item in
+                        AnyView(item.view)
+                    }
+                }
+                VStack{
+                    HStack{
+                        Image(systemName: "arrow.left")
+                            .onTapGesture {
+                                self.viewList.currentIndex -= 1
+                            }
+                            .disabled(!self.viewList.hasPrevious)
+                        Spacer()
+                        Image(systemName: "arrow.right")
+                            .onTapGesture {
+                                self.viewList.currentIndex += 1
+                            }
+                            .disabled(!self.viewList.hasNext)
+                            .foregroundStyle(Color.blue, Color.gray)
+                    }
+                    Spacer()
                 }
             }
-            .onAppear{
-                // case using Carousel_ID
-//                self.currentID = list.first?.id
+            .onChange(of: viewList.current) { _, newValue in
+                if let index = self.viewList.views.firstIndex(of: viewList.current!){
+                    self.viewList.currentIndex = index
+                    print(self.viewList.currentIndex)
+                }
             }
+            .onChange(of: viewList.currentIndex) { newValue in
+                self.viewList.current = viewList.views[self.viewList.currentIndex]
+            }
+            
         }
         else{
             VStack(spacing: 0){
-                if (!(list.isEmpty)){
-                    if let currentItem = list.filter({$0.id == currentID}).first{
-                        //                if let currentItem = viewList.list.indices.contains(currentindex) ? viewList.list[currentindex] : nil{
-                        Text(currentItem.subject)
-                            .lineLimit(2)
-                            .multilineTextAlignment(.center)
-                            .foregroundStyle(.purple)
-                            .font(.footnote)
-                    }
+                if let currentItem = viewList.current{
+                    Text(currentItem.subject)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(.purple)
+                        .font(.footnote)
                 }
                 else{
                     Text("Loading . . .")
                 }
                 
-                Carousel_ID_lowerVersion(
-                    items: list,
-                    currentID: $currentID
+                Carousel_lowerVersion(
+                    items: viewList.views,
+                    current: $viewList.current
                 ) { item in
                     AnyView(item.view)
                 }
             }
+            .onChange(of: viewList.current) { newValue in
+                if let index = self.viewList.views.firstIndex(of: viewList.current!){
+                    viewList.currentIndex = index
+                }
+            }
+            .onChange(of: viewList.currentIndex) { newValue in
+                self.viewList.current = viewList.views[self.viewList.currentIndex]
+            }
         }
     }
+    
+    
+
+    
 }
 
 #Preview {

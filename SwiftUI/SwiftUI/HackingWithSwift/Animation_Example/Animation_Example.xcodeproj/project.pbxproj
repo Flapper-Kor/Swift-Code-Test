@@ -34,6 +34,7 @@
 		1B8DBBDA2A5AA17600BEDA07 /* MultiStepAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DBBD92A5AA17600BEDA07 /* MultiStepAnimation.swift */; };
 		1BA9FA902A5460DB00FB233B /* DragNDrop_Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9FA8F2A5460DB00FB233B /* DragNDrop_Views.swift */; };
 		1BA9FAAF2A5488FB00FB233B /* DragNDrop_Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9FAAE2A5488FB00FB233B /* DragNDrop_Canvas.swift */; };
+		5FE8960B2B8F1F15007EB6AA /* FlapperLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 5FE8960A2B8F1F15007EB6AA /* FlapperLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE8960B2B8F1F15007EB6AA /* FlapperLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +194,9 @@
 			dependencies = (
 			);
 			name = Animation_Example;
+			packageProductDependencies = (
+				5FE8960A2B8F1F15007EB6AA /* FlapperLayout */,
+			);
 			productName = Animation_Example;
 			productReference = 1B30E4662A54023800041F7F /* Animation_Example.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 1B30E45D2A54023800041F7F;
+			packageReferences = (
+				5FE896092B8F1F15007EB6AA /* XCRemoteSwiftPackageReference "FlapperLayout" */,
+			);
 			productRefGroup = 1B30E4672A54023800041F7F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -469,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5FE896092B8F1F15007EB6AA /* XCRemoteSwiftPackageReference "FlapperLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flapper-Kor/FlapperLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.12;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FE8960A2B8F1F15007EB6AA /* FlapperLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FE896092B8F1F15007EB6AA /* XCRemoteSwiftPackageReference "FlapperLayout" */;
+			productName = FlapperLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B30E45E2A54023800041F7F /* Project object */;
 }

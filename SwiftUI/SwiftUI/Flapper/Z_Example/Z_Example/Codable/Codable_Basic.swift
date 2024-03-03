@@ -27,9 +27,9 @@ struct Codable_Basic: View {
     
     func setText() -> String{
         if let json = try? JSONEncoder().encode(rgb) {
-            if let decode = try? JSONDecoder().decode(RGBColor.self, from: json){
+//            if let decode = try? JSONDecoder().decode(RGBColor.self, from: json){
 //                print(decode.r, decode.g, decode.b)
-            }
+//            }
             return String(decoding: json, as: UTF8.self)
         }else{
             return ""

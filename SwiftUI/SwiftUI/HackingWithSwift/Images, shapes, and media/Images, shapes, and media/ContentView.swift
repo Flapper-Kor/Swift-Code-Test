@@ -65,7 +65,9 @@ struct ContentView: View {
                 }
                 
                 Carousel_ID(
-                    items: list, currentID: $currentID
+                    items: list,
+                    currentID: $currentID,
+                    stackStyle: .normal
                 ) { item in
                     AnyView(item.view)
                 }
@@ -84,7 +86,8 @@ struct ContentView: View {
                             .lineLimit(2)
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.purple)
-                        .font(.footnote)                    }
+                            .font(.footnote)
+                    }
                 }
                 else{
                     Text("Loading . . .")
@@ -96,9 +99,6 @@ struct ContentView: View {
                 ) { item in
                     AnyView(item.view)
                 }
-            }
-            .onAppear{
-                
             }
         }
     }

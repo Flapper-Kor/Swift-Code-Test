@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FC9F01E2B9043FD00C5BBF1 /* FlapperLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F01D2B9043FD00C5BBF1 /* FlapperLayout */; };
+		5FC9F0212B91989E00C5BBF1 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F0202B91989E00C5BBF1 /* BitCollections */; };
+		5FC9F0232B91989E00C5BBF1 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F0222B91989E00C5BBF1 /* Collections */; };
+		5FC9F0252B91989E00C5BBF1 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F0242B91989E00C5BBF1 /* DequeModule */; };
+		5FC9F0272B91989E00C5BBF1 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F0262B91989E00C5BBF1 /* HashTreeCollections */; };
+		5FC9F0292B91989E00C5BBF1 /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F0282B91989E00C5BBF1 /* HeapModule */; };
+		5FC9F02B2B91989E00C5BBF1 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F02A2B91989E00C5BBF1 /* OrderedCollections */; };
+		5FC9F02D2B91989E00C5BBF1 /* _RopeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 5FC9F02C2B91989E00C5BBF1 /* _RopeModule */; };
 		5FE291E92B8E00D20023298C /* TEMPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE291E82B8E00D20023298C /* TEMPApp.swift */; };
 		5FE291EB2B8E00D20023298C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE291EA2B8E00D20023298C /* ContentView.swift */; };
 		5FE291ED2B8E00D30023298C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE291EC2B8E00D30023298C /* Assets.xcassets */; };
@@ -27,6 +35,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FC9F0272B91989E00C5BBF1 /* HashTreeCollections in Frameworks */,
+				5FC9F0232B91989E00C5BBF1 /* Collections in Frameworks */,
+				5FC9F0252B91989E00C5BBF1 /* DequeModule in Frameworks */,
+				5FC9F0212B91989E00C5BBF1 /* BitCollections in Frameworks */,
+				5FC9F0292B91989E00C5BBF1 /* HeapModule in Frameworks */,
+				5FC9F02B2B91989E00C5BBF1 /* OrderedCollections in Frameworks */,
+				5FC9F02D2B91989E00C5BBF1 /* _RopeModule in Frameworks */,
+				5FC9F01E2B9043FD00C5BBF1 /* FlapperLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +101,16 @@
 			dependencies = (
 			);
 			name = TEMP;
+			packageProductDependencies = (
+				5FC9F01D2B9043FD00C5BBF1 /* FlapperLayout */,
+				5FC9F0202B91989E00C5BBF1 /* BitCollections */,
+				5FC9F0222B91989E00C5BBF1 /* Collections */,
+				5FC9F0242B91989E00C5BBF1 /* DequeModule */,
+				5FC9F0262B91989E00C5BBF1 /* HashTreeCollections */,
+				5FC9F0282B91989E00C5BBF1 /* HeapModule */,
+				5FC9F02A2B91989E00C5BBF1 /* OrderedCollections */,
+				5FC9F02C2B91989E00C5BBF1 /* _RopeModule */,
+			);
 			productName = TEMP;
 			productReference = 5FE291E52B8E00D20023298C /* TEMP.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,10 @@
 				Base,
 			);
 			mainGroup = 5FE291DC2B8E00D20023298C;
+			packageReferences = (
+				5FC9F01C2B9043FC00C5BBF1 /* XCRemoteSwiftPackageReference "FlapperLayout" */,
+				5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 5FE291E62B8E00D20023298C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -359,6 +389,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5FC9F01C2B9043FC00C5BBF1 /* XCRemoteSwiftPackageReference "FlapperLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flapper-Kor/FlapperLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.12;
+			};
+		};
+		5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FC9F01D2B9043FD00C5BBF1 /* FlapperLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01C2B9043FC00C5BBF1 /* XCRemoteSwiftPackageReference "FlapperLayout" */;
+			productName = FlapperLayout;
+		};
+		5FC9F0202B91989E00C5BBF1 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		5FC9F0222B91989E00C5BBF1 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		5FC9F0242B91989E00C5BBF1 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		5FC9F0262B91989E00C5BBF1 /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		5FC9F0282B91989E00C5BBF1 /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
+		5FC9F02A2B91989E00C5BBF1 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+		5FC9F02C2B91989E00C5BBF1 /* _RopeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FC9F01F2B91989E00C5BBF1 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = _RopeModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FE291DD2B8E00D20023298C /* Project object */;
 }

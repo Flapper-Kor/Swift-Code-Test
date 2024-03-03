@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
+
 struct ScrollView_Basic: View {
     @State private var selectedID: UUID?
     var items: [Item]
@@ -19,59 +19,61 @@ struct ScrollView_Basic: View {
     }
     
     var body: some View {
-        VStack{
-            VStack {
-                ScrollView(.horizontal) {
-                    LazyHStack(spacing: 0) {
-                        ForEach(items, id: \.id) { item in
-                            ItemView(item: item)
-                                .containerRelativeFrame(.horizontal) { width, _ in
-                                    min(width, .infinity)
-                                }
-                                .onTapGesture {
-                                    if (item.id != selectedID){
-                                        selectedID = item.id
-                                        print(selectedID as Any)
+        if #available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *){
+            VStack{
+                VStack {
+                    ScrollView(.horizontal) {
+                        LazyHStack(spacing: 0) {
+                            ForEach(items, id: \.id) { item in
+                                ItemView(item: item)
+                                    .containerRelativeFrame(.horizontal) { width, _ in
+                                        min(width, .infinity)
                                     }
-                                }
+                                    .onTapGesture {
+                                        if (item.id != selectedID){
+                                            selectedID = item.id
+                                            print(selectedID as Any)
+                                        }
+                                    }
+                            }
                         }
                     }
+                    .scrollPosition(id: $selectedID)
+                    .scrollIndicators(.never)          // 스크롤 막대 숨기기
+                    .scrollTargetBehavior(.paging)
                 }
-                .scrollPosition(id: $selectedID)
-                .scrollIndicators(.never)          // 스크롤 막대 숨기기
-                .scrollTargetBehavior(.paging)
-            }
-            .background()
-            .border(.red)
-            
-            Spacer(minLength: 30)
-            VStack {
-                ScrollView(.horizontal) {
-                    LazyHStack(spacing: 0) {
-                        ForEach(items, id: \.id) { item in
-                            ItemView(item: item)
-                                .containerRelativeFrame(
-                                    .horizontal,        // 규직을 정의할 방향
-                                    count: 2,           // 컨테이너를 나눌 수 (아래의 span과 반대)
-                                    span: 1,            // 뷰가 실제로 차지해야 하는 행이나 열의 수
-                                    spacing: -50,         // 컨테이너 사이의 간격
-                                    alignment: .center  // 잘 모르겠음
-                                )
-                                .onTapGesture {
-                                    if (item.id != selectedID){
-                                        selectedID = item.id
-                                        print(selectedID as Any)
+                .background()
+                .border(.red)
+                
+                Spacer(minLength: 30)
+                VStack {
+                    ScrollView(.horizontal) {
+                        LazyHStack(spacing: 0) {
+                            ForEach(items, id: \.id) { item in
+                                ItemView(item: item)
+                                    .containerRelativeFrame(
+                                        .horizontal,        // 규직을 정의할 방향
+                                        count: 2,           // 컨테이너를 나눌 수 (아래의 span과 반대)
+                                        span: 1,            // 뷰가 실제로 차지해야 하는 행이나 열의 수
+                                        spacing: -50,         // 컨테이너 사이의 간격
+                                        alignment: .center  // 잘 모르겠음
+                                    )
+                                    .onTapGesture {
+                                        if (item.id != selectedID){
+                                            selectedID = item.id
+                                            print(selectedID as Any)
+                                        }
                                     }
-                                }
+                            }
                         }
                     }
+                    .scrollPosition(id: $selectedID)
+                    .scrollIndicators(.never)          // 스크롤 막대 숨기기
+                    .scrollTargetBehavior(.paging)
                 }
-                .scrollPosition(id: $selectedID)
-                .scrollIndicators(.never)          // 스크롤 막대 숨기기
-                .scrollTargetBehavior(.paging)
+                .background()
+                .border(.red)
             }
-            .background()
-            .border(.red)
         }
     }
 }

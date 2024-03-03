@@ -22,6 +22,7 @@
 		1BA9FAAD2A54845900FB233B /* BuiltinShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9FAAC2A54845900FB233B /* BuiltinShapes.swift */; };
 		1BA9FAB12A54998300FB233B /* CostomPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9FAB02A54998300FB233B /* CostomPath.swift */; };
 		1BD2359A2A56A5090048FAD5 /* myShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD235992A56A5090048FAD5 /* myShape.swift */; };
+		5FE896072B8F1B76007EB6AA /* FlapperLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 5FE896062B8F1B76007EB6AA /* FlapperLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE896072B8F1B76007EB6AA /* FlapperLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +75,9 @@
 		1BA9FA9C2A54840300FB233B /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				1BA9FA9F2A54840300FB233B /* ContentView.swift */,
 				1BA9FAAB2A54842F00FB233B /* Views */,
 				1BA9FA9D2A54840300FB233B /* DrawingApp.swift */,
-				1BA9FA9F2A54840300FB233B /* ContentView.swift */,
 				1BA9FAA12A54840400FB233B /* Assets.xcassets */,
 				1BA9FAA32A54840400FB233B /* Preview Content */,
 			);
@@ -124,6 +126,9 @@
 			dependencies = (
 			);
 			name = Drawing;
+			packageProductDependencies = (
+				5FE896062B8F1B76007EB6AA /* FlapperLayout */,
+			);
 			productName = Drawing;
 			productReference = 1BA9FA9A2A54840300FB233B /* Drawing.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 1BA9FA912A54840300FB233B;
+			packageReferences = (
+				5FE896052B8F1B76007EB6AA /* XCRemoteSwiftPackageReference "FlapperLayout" */,
+			);
 			productRefGroup = 1BA9FA9B2A54840300FB233B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5FE896052B8F1B76007EB6AA /* XCRemoteSwiftPackageReference "FlapperLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flapper-Kor/FlapperLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.12;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FE896062B8F1B76007EB6AA /* FlapperLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FE896052B8F1B76007EB6AA /* XCRemoteSwiftPackageReference "FlapperLayout" */;
+			productName = FlapperLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1BA9FA922A54840300FB233B /* Project object */;
 }
